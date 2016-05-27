@@ -96,7 +96,6 @@ class NonEmptySet( val root : Int, val left : SetOfInt, val right : SetOfInt ) e
   override def exclude( x : Int ) : SetOfInt = {
     def foldOperation : ( SetOfInt, Int ) => SetOfInt = (( set, value ) => if( value == x ) set else  set insert value )
     this.toList.foldLeft ( SetOfIntUtil.empty : SetOfInt ) (foldOperation)
-
   }
 
 }
