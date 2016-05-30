@@ -6,10 +6,11 @@ import org.scalatest._
   */
 class ExerciseSection7 extends FlatSpec with Matchers {
   var emptyList = Nil
-  var someNumbers = List(2, 4, 5, 10, 12, 19)
-  var someNumbersWithout4 = List(2, 5, 10, 12, 19)
+  var someNumbers = List( 10, 12, 19, 2, 4, 5 )
+  val otherNumbers = List( 12, 14, 0, 15, 2, 9 )
+
 
   it should "be able to insert elements" in {
-     IntTreeHelper.sum( IntTreeHelper.fromList( someNumbers )) should be (52)
+     IntTreeHelper.Sum( IntTreeHelper.fromList( someNumbers )) should be (52)
   }
 }
